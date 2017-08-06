@@ -1,0 +1,264 @@
+/* Site Colors:
+  
+#1A446C - blue grey
+  
+#689DC1 - light blue
+  
+#D4E6F4 - very light blue
+  
+#FFFFFF - white
+  
+#000000 - black
+*/
+
+
+
+html 
+
+	{ 
+	height: 100%; 
+	width: 100%; 
+	}
+
+
+body 
+
+	{ 
+	height: 100%; 
+	width: 100%; 
+	margin: 0; 
+	padding: 0; 
+	border: 0; 
+	background: #000000;
+	margin-left:2%;
+  
+	font: 	13px/15px Helvetica,Verdana, Arial,sans-serif; 
+	}
+
+
+img 
+
+	{ 
+	border: none; 
+	}
+
+
+table, tr, td, tr 
+
+	{ 
+	border-collapse: collapse; 
+	vertical-align: top; 
+	text-align: left;
+  
+	font: 13px/15px Helvetica,Verdana, Arial,sans-serif; 
+	}
+
+a:link    {
+  /* Applies to all unvisited links */
+  text-decoration:  none;
+  font-weight:      bold;
+  color:            #FFF;
+  } 
+a:visited {
+  /* Applies to all visited links */
+  text-decoration:  none;
+  font-weight:      bold;
+  color:            #FFF;
+  } 
+a:hover   {
+  /* Applies to links under the pointer */
+  text-decoration:  underline;
+  font-weight:      bold;
+  color:            #689DC1;
+  } 
+a:active  {
+  /* Applies to activated links */
+  text-decoration:  underline;
+  font-weight:      bold;
+   color: white;
+  } 
+
+#header
+ 
+	{
+	height: 70px; 
+	text-align: left; 
+	background: #000000; 
+	color: #ffffff;
+	font: 20px Helvetica,Verdana, Arial,sans-serif;
+	padding-bottom:4px;
+	margin-bottom:2%;
+	
+	
+	 }
+
+
+
+#header h1 
+	{ 
+	padding: 1em; 
+	margin: 0;
+	}
+#main
+ 
+	{
+	text-align: left; 
+	background: #000000; 
+	color: #ffffff;
+	font: 15px Helvetica,Verdana, Arial,sans-serif;
+	min-height:80%;
+	width:100%;
+	padding-top:10px;
+	float:right;
+	margin-left: 8%;
+	
+
+	
+	 }
+
+
+
+#footer 
+
+	{ 
+	height: 2em; 
+	padding: 1em; 
+	text-align: center; 
+  
+	background: #000000;  
+	color: #ffffff;
+	clear:both;
+	 
+	}
+
+
+
+table.bordered tr th, table.bordered tr td 
+
+	{ 
+	border: 1px solid #000000; 
+	color: #ffffff;
+	font: 12px Helvetica,Verdana, Arial,sans-serif;
+	padding:10px;
+	margin-left:5%;
+	}
+
+
+
+
+#photo
+ 
+	{
+	text-align:center
+	background: #000000; 
+	color: #ffffff;
+	font: 15px Helvetica,Verdana, Arial,sans-serif;
+	/*min-height: 800px;*/
+	width:80%;
+	margin-left:20%;
+	padding:10px;
+	
+	
+	 }
+#nav
+ 
+	{
+	text-align: right; 
+	background: #000000; 
+	color: #ffffff;
+	font: 18px Helvetica,Verdana, Arial,sans-serif;
+	font-weight:bold;
+	min-height:600px;
+	width: 10%;
+	float:left;
+
+	padding-right:10px;
+	
+	margin-right:8%;
+	
+	 }
+ #comment-form
+ {
+	/*text-align:center*/
+	background: #000000; 
+	color: #ffffff;
+	font: 12px Helvetica,Verdana, Arial,sans-serif;
+	/*min-height: 800px;*/
+	/*width:80%;*/
+	margin-left:20%;
+	padding:10px;
+	
+	 }
+#comments
+ {
+	text-align:left;
+	background: #000000; 
+	color: #ffffff;
+	font: 12px Helvetica,Verdana, Arial,sans-serif;
+	/*min-height: 800px;*/
+	/*width:80%;*/
+	margin-left:20%;
+	padding:10px;
+	
+}
+
+#pagination .selected 
+	{ 
+	font-weight: bold; 
+	color: #ffffff;
+	
+	}
+	
+#pagination
+	{
+	/*clear:both;*/
+	margin-right: 5%;
+	float:right;
+	}
+#help
+ {
+	float:left; 
+	width: 50%;
+	text-align:justify;
+	text-justify:inter-word;  	
+  	margin-right:2%;	
+ }
+	
+#content
+ {
+	float:left; 
+	padding:2%;
+		
+  		
+ }	
+ #photo_gallery
+ {
+	float:left; 
+	padding:2%;
+	
+  		
+ }
+ #video_content
+ {
+	float:left; 
+	padding:2%;
+	width: 20%;
+	text-align:center;
+	
+		
+  		
+ }
+ #form {
+  /* Just to center the form on the page */
+  margin: 0 auto;
+  width: 500px;
+
+  /* To see the limits of the form */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  display: inline-block;
+  text-align: right;
+  }
+  
+  
