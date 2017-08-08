@@ -39,7 +39,7 @@ function __autoload($class_name){
 	if(file_exists($path)){
 		require_once($path);
 	}else {
-		//error
+		//error - better user experience
 		die("The file {$class_name}.php could not be found");
 	}
 	

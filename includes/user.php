@@ -64,7 +64,21 @@ class User{
 	  return array_key_exists($attribute, $object_vars);
 	}
   
-
+  //checks to see if user is in the database
+  public static function authenticate($username="", $password=""){
+	  global $db;
+		  //escape special chars in password and username
+		  $username = $db->mysql_prep($username);
+		  $password = $db->mysql_prep($password);
+		  // select from database and pass into find by sql db method
+		  $sql = "SELECT * FROM users " ;
+		  $sql .= "WHERE username = '{$username}'";
+		  $sql .= "AND password = '{$password}'";
+		  $sql .= "LIMIT 1";
+		  $result_array = self::find_by_sql($sql);
+		//checks to see if array empty returns false if not array_shift returns first element
+		return !empty($result_array) ? array_shift($result_array) : false; 
+  }
 }//end user class
 
 ?>

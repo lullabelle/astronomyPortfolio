@@ -5,7 +5,7 @@ class Session {
 	private $logged_in = false;
 	private $user_id;
 	
-	function __constructSession(){
+	function __construct(){
 		session_start();
 		//check person is logged in first 
 		$this->check_login();
@@ -22,16 +22,26 @@ class Session {
 			$this->logged_in = true;
 		}
 	}
+	public function message($msg="") {
+	  if(!empty($msg)) {
+	    // then this is "set message"
+	    
+	    $_SESSION['message'] = $msg;
+	  } else {
+	    // then this is "get message"
+			return $this->message;
+	  }
+	}
 	//logout
-	public function logout(){
-		unset($_SESSION['user_id']); //unsets session id
-		unset(this->user_id); //unset user_id 
-		$this->logged_in = false; //set logged in as false
+	public function logout() {
+		unset($_SESSION['user_id']);
+		unset($this->user_id);
+		$this->logged_in = false;
 	}
 	//prevents this from being altered outside the session class
 	private function check_login(){
 		if(isset($_SESSION['user_id'])){
-			$this->user_id = $_Session['user_id'];
+			$this->user_id = $_SESSION['user_id'];
 			$this->logged_in = true;
 		}
 		else {
@@ -40,4 +50,5 @@ class Session {
 		}
 	}	
 }
+$session = new Session();
 ?>
