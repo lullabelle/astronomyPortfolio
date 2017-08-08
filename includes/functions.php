@@ -29,4 +29,19 @@ function include_layout_template($template="") {
 	include(SITE_ROOT.DS.'public'.DS.'layouts'.DS.$template);
 }
 }
+
+//for includes paths at start of file. AutoLoads object classes
+function __autoload($class_name){
+	//converts to lower case string
+	$class_name = strtolower($class_name);
+	$path = "../includes/{$class_name}.php";
+	//check if the file exists and require
+	if(file_exists($path)){
+		require_once($path);
+	}else {
+		//error
+		die("The file {$class_name}.php could not be found");
+	}
+	
+}
 ?>
