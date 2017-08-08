@@ -30,10 +30,15 @@ if($session->is_logged_in()) {
 	}  
 ?>
 		<html>
-		<head>
-		<title>Login</title>
-		</head>
-		<h2>Admin Login</h2>
+		  <head>
+			<title>astrogallery: Admin</title>
+			<link href="../stylesheets/main.css" media="all" rel="stylesheet" type="text/css" />
+		  </head>
+		  <body>
+			<div id="header">
+			  <h1>astrogallery: Admin</h1>
+			</div>
+			<div id="main">
 		
 			<form action="login.php" method="post">
 		  <table>
@@ -57,5 +62,6 @@ if($session->is_logged_in()) {
 		    </tr>
 		  </table>
 		</form>
+		</div>
 </html>
 <?php if(isset($db)) { $db->close_dbconnection(); } ?>
