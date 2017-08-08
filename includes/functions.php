@@ -2,7 +2,7 @@
 
 //file used for common functions throughout project
 
-//function removess the 0 from dates
+//function removes the 0 from dates
 
 function strip_zeros_from_date($marked_string=''){
 	$no_zeros = str_replace('*','',$marked_string);
@@ -11,7 +11,7 @@ function strip_zeros_from_date($marked_string=''){
 }
 
 // function to redirect to location
-function redirect_to($location + NULL){
+function redirect_to($location = NULL){
 	if($location !=NULL){
 		header("Location: {$location}");
 		exit;
@@ -25,5 +25,8 @@ function output_message($message=""){
 	}else {
 		return "";
 	}
+function include_layout_template($template="") {
+	include(SITE_ROOT.DS.'public'.DS.'layouts'.DS.$template);
+}
 }
 ?>

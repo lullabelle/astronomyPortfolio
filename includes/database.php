@@ -44,7 +44,7 @@ class Database {
 		return $escaped_string;
 	}
 	  public function fetch_array($result_set) {
-    return mysqli_fetch_array($result_set);
+		return mysqli_fetch_array($result_set);
 	}
 	
 	// returns number of rows affected by the last sql statement run
