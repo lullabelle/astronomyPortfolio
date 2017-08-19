@@ -29,7 +29,7 @@ body
 	margin: 0; 
 	padding: 0; 
 	border: 0; 
-	background: #000000;
+	background: #FFFFFF;
 	margin-left:2%;
   
 	font: 	13px/15px Helvetica,Verdana, Arial,sans-serif; 
@@ -53,45 +53,56 @@ table, tr, td, tr
 	font: 13px/15px Helvetica,Verdana, Arial,sans-serif; 
 	}
 
-a:link    {
-  /* Applies to all unvisited links */
-  text-decoration:  none;
-  font-weight:      bold;
-  color:            #FFF;
-  } 
-a:visited {
-  /* Applies to all visited links */
-  text-decoration:  none;
-  font-weight:      bold;
-  color:            #FFF;
-  } 
-a:hover   {
-  /* Applies to links under the pointer */
-  text-decoration:  underline;
-  font-weight:      bold;
-  color:            #689DC1;
-  } 
-a:active  {
-  /* Applies to activated links */
-  text-decoration:  underline;
-  font-weight:      bold;
-   color: white;
-  } 
+/*navigation links	*/
+/* Remove margins and padding from the list, and add a black background color */
+.nav-wrapper{
+	margin-left:22%;
+}
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+}
 
-#header
+/* Float the list items side by side */
+ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #444;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 20px;
+    font-weight:bold;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #555;
+color: #fff;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+.header
  
 	{
-	height: 70px; 
+	height: 80px; 
 	text-align: left; 
-	background: #000000; 
-	color: #ffffff;
-	font: 20px Helvetica,Verdana, Arial,sans-serif;
+	background: #FFFFFF; 
+	color: #333333;
+	font: 2em Helvetica,Verdana, Arial,sans-serif;
 	padding-bottom:4px;
 	margin-bottom:2%;
+	margin-left: 22%;
+	margin-top:5%;
 	
 	
 	 }
-
 
 
 #header h1 
@@ -99,23 +110,6 @@ a:active  {
 	padding: 1em; 
 	margin: 0;
 	}
-#main
- 
-	{
-	text-align: left; 
-	background: #000000; 
-	color: #ffffff;
-	font: 15px Helvetica,Verdana, Arial,sans-serif;
-	min-height:80%;
-	width:100%;
-	padding-top:10px;
-	float:right;
-	margin-left: 8%;
-	
-
-	
-	 }
-
 
 
 #footer 
@@ -124,19 +118,17 @@ a:active  {
 	height: 2em; 
 	padding: 1em; 
 	text-align: center; 
-  
-	background: #000000;  
-	color: #ffffff;
+  	background: #FFFFFF;  
+	color: #333333;
 	clear:both;
 	 
 	}
 
 
-
 table.bordered tr th, table.bordered tr td 
 
 	{ 
-	border: 1px solid #000000; 
+	border: 1px solid #FFFFFF; 
 	color: #ffffff;
 	font: 12px Helvetica,Verdana, Arial,sans-serif;
 	padding:10px;
@@ -144,13 +136,10 @@ table.bordered tr th, table.bordered tr td
 	}
 
 
-
-
 #photo
  
 	{
-	text-align:center
-	background: #000000; 
+	text-align:center;
 	color: #ffffff;
 	font: 15px Helvetica,Verdana, Arial,sans-serif;
 	/*min-height: 800px;*/
@@ -158,70 +147,43 @@ table.bordered tr th, table.bordered tr td
 	margin-left:20%;
 	padding:10px;
 	
-	
-	 }
-#nav
- 
-	{
-	text-align: right; 
-	background: #000000; 
-	color: #ffffff;
-	font: 18px Helvetica,Verdana, Arial,sans-serif;
-	font-weight:bold;
-	min-height:600px;
-	width: 10%;
-	float:left;
+	}
 
-	padding-right:10px;
-	
-	margin-right:8%;
-	
-	 }
  #comment-form
  {
 	/*text-align:center*/
-	background: #000000; 
-	color: #ffffff;
+	background: #ffffff; 
+	color: #333333;
 	font: 12px Helvetica,Verdana, Arial,sans-serif;
-	/*min-height: 800px;*/
-	/*width:80%;*/
-	margin-left:20%;
-	padding:10px;
 	
 	 }
-#comments
- {
-	text-align:left;
-	background: #000000; 
-	color: #ffffff;
-	font: 12px Helvetica,Verdana, Arial,sans-serif;
-	/*min-height: 800px;*/
-	/*width:80%;*/
-	margin-left:20%;
+.formrow{
 	padding:10px;
-	
 }
+	 
 
-#pagination .selected 
-	{ 
-	font-weight: bold; 
-	color: #ffffff;
-	
-	}
-	
-#pagination
-	{
-	/*clear:both;*/
-	margin-right: 5%;
-	float:right;
-	}
-#help
+.container
  {
-	float:left; 
-	width: 50%;
-	text-align:justify;
-	text-justify:inter-word;  	
-  	margin-right:2%;	
+ 	float: left;
+    width: 50%;
+	text-align:justify;  	
+  	line-height: 180%;
+  	margin-left:22%;	
+ }
+
+ #about-container
+ {
+ 	float: left;
+    width: 500px;
+	text-align:justify;  	
+  	line-height: 180%;
+  	margin-left:22%;	
+ }
+ #video-wrapper
+ {
+ 	float:left;
+ 	width:400px;
+ 	padding:2%;
  }
 	
 #content
@@ -238,27 +200,156 @@ table.bordered tr th, table.bordered tr td
 	
   		
  }
- #video_content
+/* wrapper to add padding to contact page to even out height with nav*/
+ .text_wrapper
+ {
+	padding-top:5px;
+ 		
+ }
+ #cv_wrapper
  {
 	float:left; 
-	padding:2%;
-	width: 20%;
-	text-align:center;
-	
-		
-  		
+	width: 55%;
+    text-align: justify;
+    line-height: 180%;
+    margin-left: 20%;
+ 		
  }
- #form {
-  /* Just to center the form on the page */
-  margin: 0 auto;
-  width: 500px;
+ .video
+ {
+	float:right;
+	margin-right:10%;
+	margin-bottom:5%; 
+	 }
+	 
 
-  /* To see the limits of the form */
-  padding: 1em;
-  border: 1px solid #CCC;
-  border-radius: 1em;
-  display: inline-block;
-  text-align: right;
+input[type=submit] {
+  background: #FFFFFF;
+  border-radius: 5px;
+  font-family: Helvetica;
+  color: #333333;
+  font-size: 10px;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+}
+/*social media icons at fixed position on page*/
+.icons{
+	position:fixed;
+	left:90%;
+	top:5%;
+
+}
+ @media screen and (max-width:680px){
+	.header {height: 80px; 
+	text-align: center; 
+	background: #FFFFFF; 
+	color: #333333;
+	font: 1.0em Helvetica,Verdana, Arial,sans-serif;
+	padding-bottom:4px;
+	margin-bottom:2%;
+	margin-left: 2%;}
+
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
   }
+  #photo {
+	 margin: 0 auto;
+   
+}
+}
+  @media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+@media screen and (max-width:959px){
+	.container{
+	width:100%;
+	
+	}
+	#about-container{
+	width:70%;
+	}
+	#video-wrapper{
+	width:30%;
+	margin-left:28%;
+
+	}
+}	
+@media screen and (max-width:640px){
+	.container{
+	width:100%;
+	margin-left:2%;
+	}
+	#about-container{
+	width:100%;
+	}
+	#video-wrapper{
+	width:100%;
+	
+	}
+}
+
+@media screen and (max-width:320px){
+	.container{
+	width:100%;
+	margin-left:2%;
+	}
+	#about-container{
+	width:100%;
+	}
+	#video-wrapper{
+	width:100%;
+	
+	}
+}
+
+
+
+
+ 
+
+
+
+
+/* hero div CSS*/
+#hero{
+  background-image:url(https://chrisaam.files.wordpress.com/2015/03/wallpaper-2846361.jpg);
+  background-size:cover;
+  position:relative;
+}
+
+#hero_header{
+  display:none;	
+  position: absolute;
+  top:90%;
+  left:22%;
+  width:100%;
+  color:#fff;
+  font-family: 'Josefin Slab', serif;
+  /*font-family:'Lobster', cursive; */
+  font-size:2.5vw;
+  -ms-transform: translate(0,-50%); /* IE 9 */
+   	-webkit-transform: translate(0,-50%); /* Safari */
+    transform: translate(0,-50%); 
+   
+
+}
+
+
+
   
   

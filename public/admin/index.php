@@ -1,12 +1,10 @@
 <?php
-require_once('../../includes/functions.php');
-require_once('../../includes/session.php');
-
+require_once('../../includes/initialize.php');
 if(!$session->is_logged_in()) {
 	redirect_to("login.php");
 	}
 ?>
-
+<?php include_layout_template('admin_header.php');?>
 <div id="help">
 	<h2 style="text-align:left;"> Welcome to astrogallery administration portal</h2>
 	<p> Please make a selection from the menu on the left hand side to upload new images or videos. 
@@ -16,3 +14,4 @@ if(!$session->is_logged_in()) {
 
 	
 	</div>
+<?php include_layout_template('footer.php');?>	

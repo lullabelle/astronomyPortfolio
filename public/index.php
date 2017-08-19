@@ -1,8 +1,6 @@
-<?php require_once("../includes/initialize.php"); ?>
 <?php
-require_once('../includes/functions.php');
-require_once("../includes/database.php");
 
+require_once("../includes/initialize.php");
 
 
 

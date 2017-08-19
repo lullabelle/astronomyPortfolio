@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>astrogallery</title>
+    <title>astrogallery: Home</title>
 
   </head>
   <body>

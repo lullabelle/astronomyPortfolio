@@ -1,5 +1,5 @@
 <?php
-require_once("config.php");
+require_once(LIB_PATH.DS."initialize.php");
 
 class Database {
 	// db connection is accessible from any class

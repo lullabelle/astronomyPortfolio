@@ -1,7 +1,9 @@
-<?php require_once("../includes/initialize.php"); ?>
+<?php require_once("../includes/initialize.php"); 
 
-<?php include_layout_template('home_header.php'); ?>
-<?php include_layout_template('nav.php'); ?>
+ include_layout_template('home_header.php'); 
+ include_layout_template('nav.php'); 
+ 
+?>
 
 	<!-- jQuery library (served from Google) -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>

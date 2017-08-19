@@ -1,5 +1,4 @@
 <?php
-
 class Session {
 	// session variables
 	private $logged_in = false;
