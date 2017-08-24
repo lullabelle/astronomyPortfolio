@@ -15,6 +15,7 @@ if($session->is_logged_in()) {
 	
 		  if ($found_user) {
 			$session->login($found_user);//from session class
+			//log_action('Login', "{$found_user->username} logged in. ");// sucess redirect to index page
 			redirect_to("index.php");
 		  } else {
 			// username/password combo was not found in the database

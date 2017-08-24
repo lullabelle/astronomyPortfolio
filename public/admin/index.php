@@ -11,7 +11,7 @@ if(!$session->is_logged_in()) {
 	The site administrator may also delete content including user comments. Please choose the help file
 	if you require further assistance.
 	</p>
-
+		<li><a href="logout.php">Logout</a></li>
 	
 	</div>
 <?php include_layout_template('footer.php');?>	

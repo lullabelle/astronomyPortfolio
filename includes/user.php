@@ -10,16 +10,17 @@ class User{
 	public $first_name;
 	public $last_name;
 	
-	// created class methods so that user object does not have t be instantiated to query user table in db
+	// created class methods so that user object does not have to be instantiated to query user table in db
 	// returns all users in user table
+	protected static $table="users";
 	public static function find_all() {
-		return self::find_by_sql("SELECT * FROM users");
+		return self::find_by_sql("SELECT * FROM ".self::$table);
   }
   
   public static function find_by_id($id=0) {
     global $db;
 	
-    $result_array = self::find_by_sql("SELECT * FROM users WHERE id={$id} LIMIT 1");
+    $result_array = self::find_by_sql("SELECT * FROM ".self::$table_name." WHERE id={$id} LIMIT 1");
 	//checks to see if array empty returns false if not array_shift returns first element
 	return !empty($result_array) ? array_shift($result_array) : false;
    }
@@ -57,10 +58,8 @@ class User{
 	}
 	
 	private function has_attribute($attribute) {
-	  // get_object_vars returns an associative array with all attributes 
-	 //as keys and values
 	  $object_vars = get_object_vars($this);
-	  //returns true or false is key exists
+	//returns associative array	
 	  return array_key_exists($attribute, $object_vars);
 	}
   
@@ -79,6 +78,59 @@ class User{
 		//checks to see if array empty returns false if not array_shift returns first element
 		return !empty($result_array) ? array_shift($result_array) : false; 
   }
-}//end user class
+//CRUD
+//database public instance methods
+	public function save(){
+		//will either create or update a record in one function. 
+		//Checks to see if an id is present then updates if not creates
+		return isset($this->id) ? $this->update() : $this->create(); 
+		
+	}
 
+	public function create() {
+		global $db;
+	  $sql = "INSERT INTO ".self::$table." (";
+	  $sql .= "username, password, first_name, last_name";
+	  $sql .= ") VALUES ('";
+	  //use method from db clas that escapes value and prevent sql injection
+		$sql .= $db->mysql_prep($this->username) ."', '";
+		$sql .= $db->mysql_prep($this->password) ."', '";
+		$sql .= $db->mysql_prep($this->first_name) ."', '";
+		$sql .= $db->mysql_prep($this->last_name) ."')";
+	  if($db->query($sql)) {
+	    $this->id = $db->insert_id();
+	    return true;
+	  } else {
+	    return false;
+	  }
+	}
+	public function update(){
+	global $db;
+
+		$sql = "UPDATE ".self::$table." SET ";
+		$sql .= "username='". $db->mysql_prep($this->username) ."', ";
+		$sql .= "password='". $db->mysql_prep($this->password) ."', ";
+		$sql .= "first_name='". $db->mysql_prep($this->first_name) ."', ";
+		$sql .= "last_name='". $db->mysql_prep($this->last_name) ."' ";
+		$sql .= "WHERE id=". $db->mysql_prep($this->id);
+		$db->query($sql);
+		//checks to see if the number of affected rows is = 1
+		return ($db->affected_rows() == 1) ? true : false;
+	
+}
+
+public function delete(){
+		global $db;
+	  $sql = "DELETE FROM ".self::$table." ";
+	  $sql .= "WHERE id=". $db->mysql_prep($this->id);
+	  $sql .= " LIMIT 1";
+	  $db->query($sql);
+	  // 
+	  return ($db->affected_rows() == 1) ? true : false;
+//after delete execute the user is deleted from the database but the instance of the 
+//user still exists at a class level. 
+	}
+
+
+}//end user class
 ?>
