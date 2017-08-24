@@ -88,6 +88,18 @@ class Photograph {
 	  $object_vars = get_object_vars($this);
 	 return array_key_exists($attribute, $object_vars);
 	}
+//returns image size as KB or MB	
+	public function image_size() {
+		if($this->size < 1024) {
+			return "{$this->size} bytes";
+		} elseif($this->size < 1048576) {
+			$size_kb = round($this->size/1024);
+			return "{$size_kb} KB";
+		} else {
+			$size_mb = round($this->size/1048576, 1);
+			return "{$size_mb} MB";
+		}
+	}
   
 //CRUD
 //database public instance methods

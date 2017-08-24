@@ -3,9 +3,11 @@ class Session {
 	// session variables
 	private $logged_in = false;
 	private $user_id;
+	public $message;
 	
 	function __construct(){
 		session_start();
+		$this->check_message();
 		//check person is logged in first 
 		$this->check_login();
 	}
@@ -21,14 +23,14 @@ class Session {
 			$this->logged_in = true;
 		}
 	}
-	public function message($msg="") {
-	  if(!empty($msg)) {
-	    // then this is "set message"
-	    
-	    $_SESSION['message'] = $msg;
+	public function message($message="") {
+	  if(!empty($message)) {
+	  // if it is not empty (string sent) then need to set the message
+	  //this must be stored in session or else just an attribute of class Session
+	    $_SESSION['message'] = $message;
 	  } else {
-	    // then this is "get message"
-			return $this->message;
+	  // get message and return what was already there
+		return $this->message;
 	  }
 	}
 	//logout
@@ -47,7 +49,21 @@ class Session {
 			unset($this->user_id);
 			$this->logged_in = false;
 		}
+	}
+
+	private function check_message() {
+	//check to see if a message has already been stored in the session
+		if(isset($_SESSION['message'])) {
+	// reset message and unset the stored message
+      $this->message = $_SESSION['message'];
+      unset($_SESSION['message']);
+    } else {
+      $this->message = "";
+		}
 	}	
-}
+}//end class
+
+//create new instance of session object
 $session = new Session();
+$message = $session->message();
 ?>

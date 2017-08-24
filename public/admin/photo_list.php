@@ -7,6 +7,7 @@
 $photos = Photograph::find_all();
 ?>
 <?php include_layout_template('admin_header.php'); ?>
+
 <h2>Photographs</h2>
 <!--find all photos in database and add to this table-->
 <?php echo output_message($message); ?>
@@ -27,7 +28,7 @@ $photos = Photograph::find_all();
     <td><img src="../<?php echo $photo->image_path(); ?>" width="100" /></td>
     <td><?php echo $photo->filename; ?></td>
     <td><?php echo $photo->caption; ?></td>
-    <td><?php echo $photo->size_as_text(); ?></td>
+    <td><?php echo $photo->image_size(); ?></td>
     <td><?php echo $photo->type; ?></td>
   </tr>
 <?php } ?>

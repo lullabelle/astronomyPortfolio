@@ -21,7 +21,7 @@ function redirect_to($location = NULL){
 //function to output messages to client browser
 function output_message($message=""){
 	if(!empty($message)){
-		return "<p class =\"message\"{$message}</p>";
+		return "<p>{$message}</p>";
 	}else {
 		return "";
 	}
