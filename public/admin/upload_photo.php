@@ -11,10 +11,10 @@ if (!$session->is_logged_in()) { redirect_to("login.php"); }
 		$photo->attach_file($_FILES['file_upload']);
 	//save function from photograph class	
 		if($photo->save()) {
-	// if successful
+	// if successful - message stored in session variable to display on the list photos 
+	//page on redirect
 		$session->message("Photograph uploaded.");
-		
-	redirect_to('photo_list.php');	
+		redirect_to('photo_list.php');	
 		} else {
 	// Failure - output from errors array in photo class
 		$message = join("<br />", $photo->errors);
@@ -30,9 +30,8 @@ if (!$session->is_logged_in()) { redirect_to("login.php"); }
 
 	<h2>Upload Photos</h2>
 <!--HTML form to submit-->
-	<?php echo output_message($message);
-var_dump($message);
-	?>
+	<?php echo output_message($message);?>
+	
   <form action="upload_photo.php" enctype="multipart/form-data" method="POST">
     <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
     <p><input type="file" name="file_upload" /></p>

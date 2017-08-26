@@ -56,7 +56,7 @@ class Photograph {
 	public static function find_by_id($id=0) {
     global $db;
 	
-    $result_array = self::find_by_sql("SELECT * FROM ".self::$table." WHERE id={$id} LIMIT 1");
+    $result_array = self::find_by_sql("SELECT * FROM ".self::$table." WHERE id=".$db->mysql_prep($id)." LIMIT 1");
 	//checks to see if array empty returns false if not array_shift returns first element
 	return !empty($result_array) ? array_shift($result_array) : false;
    }
@@ -72,21 +72,21 @@ class Photograph {
     return $object_array;		
   }
    
-// allows user object to build itself
+// allows photo object to build itself
  	private static function instantiate($record) {
-		// checks that the object is an array and exists in db sing the attribute method
+		// checks that the object is an array and exists in db using the has_fields method
     $object = new self;
-		foreach($record as $attribute=>$value){
-		  if($object->has_attribute($attribute)) {
-		    $object->$attribute = $value;
+		foreach($record as $fields=>$value){
+		  if($object->has_fields($fields)) {
+		    $object->$fields = $value;
 		  }
 		}
 		return $object;
 	}
 	
-	private function has_attribute($attribute) {
+	private function has_fields($fields) {
 	  $object_vars = get_object_vars($this);
-	 return array_key_exists($attribute, $object_vars);
+	 return array_key_exists($fields, $object_vars);
 	}
 //returns image size as KB or MB	
 	public function image_size() {
@@ -145,6 +145,18 @@ class Photograph {
 		}
 	}//end save
 	
+//delete photograph details from database, ensures it can be uploaded again
+	public function delete_photo() {
+//call the delete function remove db entry
+		if($this->delete()) {
+//then remove the file from the target path
+		$target_path = SITE_ROOT.DS.'public'.DS.$this->image_path();
+		return unlink($target_path) ? true : false;
+		} else {
+//failed: did not delete file			
+		return false;
+		}
+	}	
 // define path to image directory
 	public function image_path() {
 	  return $this->upload_dir.DS.$this->filename;

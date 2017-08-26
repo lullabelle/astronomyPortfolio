@@ -30,6 +30,9 @@ $photos = Photograph::find_all();
     <td><?php echo $photo->caption; ?></td>
     <td><?php echo $photo->image_size(); ?></td>
     <td><?php echo $photo->type; ?></td>
+	
+<!--redirect to delete photo page passing in ID via URL-->
+<td><a href="delete_photo.php?id=<?php echo $photo->id; ?>">Delete</a></td>
   </tr>
 <?php } ?>
 </table>

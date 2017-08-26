@@ -7,6 +7,7 @@ if(!$session->is_logged_in()) {
 <?php include_layout_template('admin_header.php');?>
 <?php include_layout_template('admin_nav.php'); ?>
 <div id="help">
+<?php echo output_message($message); ?>
 	<h2 style="text-align:left;"> Welcome to astrogallery administration portal</h2>
 	<p> Please make a selection from the menu on the left hand side to upload new images or videos. 
 	The site administrator may also delete content including user comments. Please choose the help file
