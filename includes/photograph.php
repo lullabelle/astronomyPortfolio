@@ -61,7 +61,7 @@ class Photograph {
 	return !empty($result_array) ? array_shift($result_array) : false;
    }
 // universal find by sql method to accept any sql passed to it - used in above methods
-//returns back rows from database and instantiates as user objects
+//returns back rows from database and instantiates as photo objects
 	public static function find_by_sql($sql="") {
     global $db;
     $result_set = $db->query($sql);

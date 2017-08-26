@@ -18,8 +18,8 @@ $photos = Photograph::find_all();
     <th>Caption</th>
     <th>Size</th>
     <th>Type</th>
-		<th>Comments</th>
-		<th>&nbsp;</th>
+	<th>Comments</th>
+	<th>&nbsp;</th>
   </tr>
   <!--loop through photos in database-->
 <?php foreach($photos as $photo){ ?>

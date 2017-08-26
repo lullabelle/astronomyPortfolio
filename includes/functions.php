@@ -43,7 +43,8 @@ function __autoload($class_name){
 	}else {
 		//error - better user experience
 		die("The file {$class_name}.php could not be found");
-	
+	}
+}
 function log_action($action, $message="") {
 	$logfile = SITE_ROOT.DS.'logs'.DS.'log.txt';
 	$new = file_exists($logfile) ? false : true;
@@ -57,10 +58,11 @@ function log_action($action, $message="") {
     echo "Could not open log file for writing.";
   }
 }
+//represents strtotime as tidy string
 function datetime_to_text($datetime="") {
   $unixdatetime = strtotime($datetime);
   return strftime("%d %B, %Y at %I:%M %p", $unixdatetime);
-}}
-	
 }
+	
+
 ?>
