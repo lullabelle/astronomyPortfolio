@@ -71,6 +71,20 @@ class Photograph {
     }
     return $object_array;		
   }
+// uses find_comments method from comments class to return comments for 'this' photo  
+	public function comments() {
+		return Comment::find_comments($this->id);
+	}
+//returns total number of records (photos) in table
+  public static function total_records() {
+	global $db;
+	  $sql = "SELECT COUNT(*) FROM ".self::$table;
+	  $results = $db->query($sql);
+//returns result as a row (a number inside a field, inside a row)	  
+	  $row = $db->fetch_array($results);
+//use array shift to get first row (there is only 1 returned) to get value of count	  
+    return array_shift($row);
+	}	
    
 // allows photo object to build itself
  	private static function instantiate($record) {

@@ -21,7 +21,7 @@ $photos = Photograph::find_all();
 	<th>Comments</th>
 	<th>&nbsp;</th>
   </tr>
-  <!--loop through photos in database-->
+<!--loop through photos in database-->
 <?php foreach($photos as $photo){ ?>
   <tr>
 <!-- photo class will handle the image path -->
@@ -30,15 +30,16 @@ $photos = Photograph::find_all();
     <td><?php echo $photo->caption; ?></td>
     <td><?php echo $photo->image_size(); ?></td>
     <td><?php echo $photo->type; ?></td>
-	
+<!--displays comment count as a link to view comments and delete them -->	
+	<td><a href="photo_comments.php?id=<?php echo $photo->id; ?>"><?php echo count($photo->comments()); ?></a></td>
 <!--redirect to delete photo page passing in ID via URL-->
-<td><a href="delete_photo.php?id=<?php echo $photo->id; ?>">Delete</a></td>
+	<td><a href="delete_photo.php?id=<?php echo $photo->id; ?>">Delete</a></td>
   </tr>
 <?php } ?>
 </table>
 <br />
 <!--redirect to photo_upload page-->
-<a href="upload_photo.php">Upload a new photograph</a>
-<br />
-<br />
+	<a href="upload_photo.php">Upload a new photograph</a>
+	<br />
+	<br />
 <?php include_layout_template('footer.php'); ?>

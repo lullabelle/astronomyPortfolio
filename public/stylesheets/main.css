@@ -327,7 +327,8 @@ input[type=submit] {
 
 /* hero div CSS*/
 #hero{
-  background-image:url(https://chrisaam.files.wordpress.com/2015/03/wallpaper-2846361.jpg);
+  background-image:url(images/auriga.jpg
+	  );
   background-size:cover;
   position:relative;
 }

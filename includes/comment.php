@@ -117,13 +117,13 @@ public $body;
 	
 }
 	public function delete() {
-	global $database;
+	global $db;
 	
-	  $sql = "DELETE FROM ".self::$table_name;
-	  $sql .= " WHERE id=". $database->escape_value($this->id);
+	  $sql = "DELETE FROM ".self::$table;
+	  $sql .= " WHERE id=". $db->mysql_prep($this->id);
 	  $sql .= " LIMIT 1";
-	  $database->query($sql);
-	 return ($database->affected_rows() == 1) ? true : false;
+	  $db->query($sql);
+	 return ($db->affected_rows() == 1) ? true : false;
 	
 	}
 	

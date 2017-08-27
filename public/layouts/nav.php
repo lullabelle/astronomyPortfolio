@@ -4,11 +4,11 @@
     <link href="stylesheets/main.css" media="all" rel="stylesheet" type="text/css" />
   </head>
  
-<div id="nav">
+<div class="nav-wrapper">
 
 <p><a href="home.php">home</a></p>
 
-<p><a href="gallery.php">gallery</a></p>
+<p><a href="photo_gallery.php">gallery</a></p>
 
 <p><a href="about.php">about</a></p>
 
@@ -19,4 +19,4 @@
 
 
 
-</div>
+</div><!-- end of nav -->
