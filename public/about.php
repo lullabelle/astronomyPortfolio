@@ -8,6 +8,7 @@
     <h1>interests & other projects</h1>
 
 		<p><i>This blog post is courtesy of jgomez65 <a href = "https://digital-photography-school.com/how-to-shoot-the-night-sky-introduction-to-astrophotography/"> Digital Photography School </a></i></p>
+		<p><i>All time lapse videos by Colm Connor, AstroGallery</i></p>
         <p>Several people asked me to post a simple tutorial on how I took some night sky pictures. 
         I am not an astrophotographer in any way, shape or form, nor do I have any expensive equipment. 
         I simply read several tutorials, picked a dark spot on the beach and tried to do my best. 

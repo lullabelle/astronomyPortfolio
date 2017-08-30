@@ -30,7 +30,7 @@ body
 	padding: 0; 
 	border: 0; 
 	background: #FFFFFF;
-	margin-left:2%;
+	margin-left:0%;
   
 	font: 	13px/15px Helvetica,Verdana, Arial,sans-serif; 
 	}
@@ -147,7 +147,7 @@ table.bordered tr th, table.bordered tr td
 	color: #ffffff;
 	font: 15px Helvetica,Verdana, Arial,sans-serif;
 	/*min-height: 800px;*/
-	width:80%;
+	width:75%;
 	margin-left:20%;
 	padding:10px;
 	
@@ -191,7 +191,7 @@ table.bordered tr th, table.bordered tr td
  .body-container
  {
  	float: left;
-    width: 500px;
+    width: 35%;
 	text-align:justify;  	
   	line-height: 180%;
   	margin-left:22%;	
@@ -358,18 +358,10 @@ input[type=submit] {
 }
 
 
-
-
- 
-
-
-
-
 /* hero div CSS*/
 #hero{
-  background-image:url(images/auriga.jpg
-	  );
-  background-size:cover;
+  background-image:url("http://localhost:81/astronomyPortfolio/public/images/bxslider/lunar_glow_hero.jpg");
+  background-size:100%;
   position:relative;
 }
 
@@ -378,7 +370,7 @@ input[type=submit] {
   position: absolute;
   top:90%;
   left:22%;
-  width:100%;
+  width:50%;
   color:#fff;
   font-family: 'Josefin Slab', serif;
   /*font-family:'Lobster', cursive; */

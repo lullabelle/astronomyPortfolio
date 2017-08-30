@@ -5,8 +5,6 @@
  
 ?>
 
-<!-- link to Google websafe fonts -->
-<link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Lobster" rel="stylesheet">
 <!-- jQuery library (served from Google) -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
@@ -17,8 +15,6 @@
 <!-- bxSlider CSS file stored with stylesheets -->
 
 <link href="stylesheets/jquery.bxslider.css" rel="stylesheet" />
-<!-- main site js -->
-<script type="text/javascript" src="javascripts/main_js.js"></script>
 
 <div id="photo">
 <!-- javascript controls for slider-->
