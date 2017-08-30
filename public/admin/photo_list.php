@@ -6,9 +6,12 @@
 //Find all photos
 $photos = Photograph::find_all();
 ?>
-<?php include_layout_template('admin_header.php'); ?>
-
-<h2>Photographs</h2>
+<?php include_layout_template('admin_header.php');?>
+<?php include_layout_template('admin_nav.php'); ?>
+<div class ="body-container">
+<div class ="list_header">
+<h2>List of Site Photos</h2>
+</div>
 <!--find all photos in database and add to this table-->
 <?php echo output_message($message); ?>
 <table class="bordered">
@@ -42,4 +45,6 @@ $photos = Photograph::find_all();
 	<a href="upload_photo.php">Upload a new photograph</a>
 	<br />
 	<br />
+</div>
+
 <?php include_layout_template('footer.php'); ?>

@@ -27,8 +27,10 @@ if (!$session->is_logged_in()) { redirect_to("login.php"); }
 <?php include_layout_template('admin_header.php'); ?>
 <?php include_layout_template('admin_nav.php'); ?>
 
-
+<div class="body-container">
+<div class ="list_header">
 	<h2>Upload Photos</h2>
+</div>	
 <!--HTML form to submit-->
 	<?php echo output_message($message);?>
 	
@@ -39,5 +41,5 @@ if (!$session->is_logged_in()) { redirect_to("login.php"); }
     <input type="submit" name="submit" value="Upload" />
   </form>
   
-
+</div>
 <?php include_layout_template('footer.php'); ?>

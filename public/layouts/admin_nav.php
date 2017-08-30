@@ -1,20 +1,28 @@
 <head>
-  <link href="../stylesheets/main.css" media="all" rel="stylesheet" type="text/css" />
+<link href="../stylesheets/main.css" media="all" rel="stylesheet" type="text/css" />
+      <!-- jQuery library (served from Google) -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+<!-- main site js -->
+<script type="text/javascript" src="../javascripts/main_js.js"></script>
   </head>
-<div id="nav">
+<div class="nav-wrapper">
+	<ul class="topnav" id="myTopnav">
+		<li><a href="index.php">admin</a></li>
 	
-		<p><a href="index.php">admin</a></p>
+		<li><a href="photo_list.php">photos</a></li>
 	
-		<p><a href="photo_list.php">photos</a></p>
+
+		<li><a href="upload_photo.php">upload photos</a></li>
+		
 	
-		<p><a href="list_videos.php">videos</a></p>
+		<li><a href="../home.php">site home</a></li>
 		
-		<p><a href="upload_photo.php">upload photos</a></p>
-		
-		<p><a href="help.php">help</a></p>
-		
-		<p><a href="../home.php">site home</a></p>
-		
-		<p><a href="logout.php">logout</a></p>
-		
-	</div>
+		<li><a href="logout.php">logout</a></li>
+		<li class="icon">
+		<a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+    </li> 
+    </ul>	
+</div>

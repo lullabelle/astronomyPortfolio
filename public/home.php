@@ -37,16 +37,16 @@
 <div id="container">
 	<ul class="bxslider">
 	<!-- load in images from image folder-->
-  <li><img src="images/auriga.jpg"title="auriga" /></li>
-  <li><img src="images/aurora_1.jpg"title="aurora" /></li>
-  <li><img src="images/aurora_5.jpg"title="aurora" /></li>
-  <li><img src="images/cassiopeia.jpg"title="cassiopeia" /></li>
-  <li><img src="images/gemini.jpg"title="gemini" /></li>
-  <li><img src="images/Lunar.jpg"title="Lunar" /></li>
-  <li><img src="images/lunar_closeup_2.jpg"title="lunar_closeup" /></li>
-  <li><img src="images/lunar_glow.jpg"title="lunar_glow" /></li>
-  <li><img src="images/night_trees1.jpg"title="night_trees" /></li>
-  <li><img src="images/orion_2.jpg"title="orion" /></li>
+  <li><img src="images/bxslider/auriga.jpg"title="auriga" /></li>
+  <li><img src="images/bxslider/aurora_1.jpg"title="aurora" /></li>
+  <li><img src="images/bxslider/aurora_5.jpg"title="aurora" /></li>
+  <li><img src="images/bxslider/cassiopeia.jpg"title="cassiopeia" /></li>
+  <li><img src="images/bxslider/gemini.jpg"title="gemini" /></li>
+  <li><img src="images/bxslider/Lunar.jpg"title="Lunar" /></li>
+  <li><img src="images/bxslider/lunar_closeup_2.jpg"title="lunar_closeup" /></li>
+  <li><img src="images/bxslider/lunar_glow.jpg"title="lunar_glow" /></li>
+  <li><img src="images/bxslider/night_trees1.jpg"title="night_trees" /></li>
+  <li><img src="images/bxslider/orion_2.jpg"title="orion" /></li>
 </ul>
 	</div>
 	

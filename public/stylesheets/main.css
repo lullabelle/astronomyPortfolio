@@ -110,7 +110,11 @@ ul.topnav li.icon {display: none;}
 	padding: 1em; 
 	margin: 0;
 	}
-
+.list_header  
+	{ 
+	padding: 1em; 
+	margin-left: 2%;
+	}
 
 #footer 
 
@@ -129,9 +133,9 @@ table.bordered tr th, table.bordered tr td
 
 	{ 
 	border: 1px solid #FFFFFF; 
-	color: #ffffff;
+	color: #000000;
 	font: 12px Helvetica,Verdana, Arial,sans-serif;
-	padding:10px;
+	padding:20px;
 	margin-left:5%;
 	}
 
@@ -148,6 +152,19 @@ table.bordered tr th, table.bordered tr td
 	padding:10px;
 	
 	}
+#pagination .selected 
+	{ 
+	font-weight: bold; 
+	color: #ffffff;
+	
+	}
+	
+#pagination
+	{
+	/*clear:both;*/
+	margin-right: 5%;
+	float:right;
+	}	
 
  #comment-form
  {
@@ -171,7 +188,7 @@ table.bordered tr th, table.bordered tr td
   	margin-left:22%;	
  }
 
- #about-container
+ .body-container
  {
  	float: left;
     width: 500px;
@@ -200,6 +217,29 @@ table.bordered tr th, table.bordered tr td
 	
   		
  }
+ /* Masonry style layout for photo_gallery */
+ .masonry { 
+    column-count: 4;
+    column-gap: 1%;
+	margin: 3em 0;
+    padding: 0;
+    -moz-column-gap: 1.5em;
+    -webkit-column-gap: 1.5em;
+    column-gap: 1.5em;
+    font-size: 1em;
+}
+/* Masonry child elements */
+.item { 
+    background-color: #fff;
+    display: inline-block;
+    padding: 1em;
+    margin: 0 0 1.5em;
+    width: 400%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    
+}
 /* wrapper to add padding to contact page to even out height with nav*/
  .text_wrapper
  {

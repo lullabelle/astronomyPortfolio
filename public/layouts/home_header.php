@@ -5,8 +5,17 @@
 
   </head>
   <body>
-    <div id="header">
-      <h1>astrogallery</h1>
+	<!-- hero div -->
+<div id="hero_wrapper">
+  <div id="hero">
+    <div id="hero_header">
+      <h1>astro-gallery</h1>
+      </div>
     </div>
+  </div>
+
+<!-- end of hero div-->
     <div id="main">
+	
+
 	

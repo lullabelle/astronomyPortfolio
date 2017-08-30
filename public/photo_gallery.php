@@ -5,7 +5,7 @@
 	$page = !empty($_GET['page']) ? (int)$_GET['page'] : 1;
 
 //get the number of records per page to display
-	$no_per_page = 3;
+	$no_per_page = 12;
 
 //total count of all photograph records
 	$total_records = Photograph::total_records();
@@ -60,8 +60,9 @@ parameters in to pagination object */
 </div><!--END PAGINATION -->
 
 <!--loop through photos in database-->
+<div class="masonry">
 <?php foreach($photos as $photo){ ?>
-  <div id="photo_gallery">
+  <div class="item">
   <!--link to larger image on large_photo.php-->
 		<a href="large_photo.php?id=<?php echo $photo->id; ?>">
 		<!--ALT TEXT DOES NOT WORK ON CHROME!! USE TITLE INSTEAD!!-->
@@ -70,7 +71,7 @@ parameters in to pagination object */
    <p><?php echo $photo->caption; ?></p>
   </div>
 <?php } ?>
-
+</div>
 <?php include_layout_template('footer.php'); ?>
 
 
