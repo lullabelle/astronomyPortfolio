@@ -9,18 +9,18 @@
 				}
 			}
 		</script>
-		<div class="footer-distributed">
+		<div class="footer-distributed-short">
 
-			<div class="footer-left">
+			<div class="footer-left-short">
 
-				<p class="footer-links">
-					<a href="home.php">Home</a>
+				<p class="footer-links-short">
+					<a href="../home.php">Home</a>
 					·
-					<a href="photo_gallery.php">Gallery</a>
+					<a href="../photo_gallery.php">Gallery</a>
 					·
-					<a href="about.php">About</a>
+					<a href="../about.php">About</a>
 					·
-					<a href="legal.php">Copyright</a>
+					<a href="../legal.php">Copyright</a>
 					·
 					<a href="admin/index.php">Admin</a>
 					·

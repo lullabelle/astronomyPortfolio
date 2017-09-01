@@ -16,4 +16,4 @@ if(!$session->is_logged_in()) {
 		
 	
 	</div>
-<?php include_layout_template('footer.php');?>	
+<?php include_layout_template('admin_footer_short.php');?>	

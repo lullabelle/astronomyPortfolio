@@ -1,8 +1,7 @@
-<?php require_once("../includes/initialize.php"); ?>
-
-
-<?php include_layout_template('header.php'); ?>
-<?php include_layout_template('nav.php'); ?>
+<?php require_once("../includes/initialize.php"); 
+include_layout_template('header.php'); 
+include_layout_template('nav.php'); 
+?>
 
 <div class ="body-container">
 <h1>copyright & legal information</h1>
@@ -17,6 +16,6 @@
 	obligations between the parties.
 	</p>
 	
-	
+</div>	
 
-<?php include_layout_template('footer.php'); ?>
+<?php include_layout_template('footer-short.php'); ?>

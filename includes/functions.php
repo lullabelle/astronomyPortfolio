@@ -45,19 +45,7 @@ function __autoload($class_name){
 		die("The file {$class_name}.php could not be found");
 	}
 }
-function log_action($action, $message="") {
-	$logfile = SITE_ROOT.DS.'logs'.DS.'log.txt';
-	$new = file_exists($logfile) ? false : true;
-  if($handle = fopen($logfile, 'a')) { // append
-    $timestamp = strftime("%Y-%m-%d %H:%M:%S", time());
-		$content = "{$timestamp} | {$action}: {$message}\r\n";
-    fwrite($handle, $content);
-    fclose($handle);
-    if($new) { chmod($logfile, 0755); }
-  } else {
-    echo "Could not open log file for writing.";
-  }
-}
+
 //represents strtotime as tidy string
 function datetime_to_text($datetime="") {
   $unixdatetime = strtotime($datetime);

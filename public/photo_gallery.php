@@ -5,7 +5,7 @@
 	$page = !empty($_GET['page']) ? (int)$_GET['page'] : 1;
 
 //get the number of records per page to display
-	$no_per_page = 12;
+	$no_per_page = 10;
 
 //total count of all photograph records
 	$total_records = Photograph::total_records();

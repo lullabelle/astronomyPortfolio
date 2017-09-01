@@ -1,4 +1,5 @@
-
+CREATE DATABASE astro_gallery;
+USE astro_gallery;
 --
 -- Table structure for table `comments`
 --
@@ -14,10 +15,6 @@ CREATE TABLE `comments` (
   KEY `photograph_id` (`photograph_id`)
 ) AUTO_INCREMENT=7;
 
---
--- Dumping data for table `comments`
---
-INSERT INTO `comments` VALUES (1,1,'2017-07-17 11:30:39','Joanne','I love this picture!'),(5,5,'2017-07-01 20:46:39','Doug','Pretty flowers.'),(6,5,'2017-07-18 21:08:58','Mary','I like them too.');
 
 --
 -- Table structure for table `photographs`
@@ -33,10 +30,6 @@ CREATE TABLE `photographs` (
   PRIMARY KEY  (`id`)
 ) AUTO_INCREMENT=9;
 
---
--- Dumping data for table `photographs`
---
-INSERT INTO `photographs` VALUES (1,'barbed heart 2.jpg','image/jpeg',265437,'Barbed Heart'),(5,'barbed.jpg','image/jpeg',394552,'Barbed'),(4,'bird.jpg','image/jpeg',322870,'Bird'),(6,'blend.jpg','image/jpeg',261152,'Blend'),(7,'blossoms 2.jpg','image/jpeg',369592,'Blossoms 2'),(8,'blossoms.jpg','image/jpeg',353050,'Blossoms');
 
 --
 -- Table structure for table `users`
@@ -56,3 +49,4 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 INSERT INTO `users` VALUES (1,'Joanne','Amadeus','Joanne','Connor');
+GRANT ALL PRIVILEGES ON astro_gallery.* TO 'Joanne'@'localhost' IDENTIFIED BY 'Amadeus' ;

@@ -16,10 +16,9 @@
     <div id="hero_header">
       <h1>astro-gallery</h1>
       </div>
-    </div>
+    </div><!-- end of hero div-->
 
 
-<!-- end of hero div-->
 
 	
 

@@ -38,7 +38,7 @@ class Database {
 		}
 	}
 	
-	// check sql query for excape characters
+	// check sql query for escape characters
 	public function mysql_prep($string){
 		$escaped_string = mysqli_real_escape_string($this->conn, $string);
 		return $escaped_string;

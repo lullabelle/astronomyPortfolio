@@ -47,7 +47,7 @@ class User{
   
   // allows user object to build itself
  	private static function instantiate($record) {
-		// checks that the object is an array and exists in db sing the attribute method
+		// checks that the object is an array and exists in db using the attribute method
     $object = new self;
 		foreach($record as $attribute=>$value){
 		  if($object->has_attribute($attribute)) {

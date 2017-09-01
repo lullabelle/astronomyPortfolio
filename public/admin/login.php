@@ -27,39 +27,23 @@ if($session->is_logged_in()) {
 		  $password = "";
 	}  
 ?>
-		<html>
-		  <head>
-			<title>astrogallery: Admin</title>
-			<link href="../stylesheets/main.css" media="all" rel="stylesheet" type="text/css" />
-		  </head>
-		  <body>
-			<div id="header">
-			  <h1>astrogallery: Admin</h1>
-			</div>
-			<div id="main">
+<?php include_layout_template('admin_header.php');?>
+
+<div id ="login-container">
+	<div id="comment_form">
 		
-			<form action="login.php" method="post">
-		  <table>
-		    <tr>
-		      <td>Username:</td>
-		      <td>
-		        <input type="text" name="username" maxlength="30" value="<?php echo htmlentities($username); ?>" />
-				<!-- HTML entities escape any values that may be dangerous-->
-		      </td>
-		    </tr>
-		    <tr>
-		      <td>Password:</td>
-		      <td>
-		        <input type="password" name="password" maxlength="30" value="<?php echo htmlentities($password); ?>" />
-		      </td>
-		    </tr>
-		    <tr>
-		      <td colspan="2">
-		        <input type="submit" name="submit" value="Login" />
-		      </td>
-		    </tr>
-		  </table>
+		<form action="login.php" method="post">
+
+		<div><input type="text" name="username" placeholder="username" maxlength="30" value="<?php echo htmlentities($username); ?>" /></div>
+		</br>
+		<!-- HTML entities escape any values that may be dangerous-->
+		<div> <input type="password" name="password" placeholder="password"  maxlength="30" value="<?php echo htmlentities($password); ?>" /></div>
+		</br>
+
+		     <div><input type="submit" name="submit" value="Login" /></div>
+	
 		</form>
 		</div>
-</html>
+</div>		
 <?php if(isset($db)) { $db->close_dbconnection(); } ?>
+<?php include_layout_template('admin_footer_short.php'); ?>

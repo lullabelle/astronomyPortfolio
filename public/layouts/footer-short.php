@@ -9,11 +9,11 @@
 				}
 			}
 		</script>
-		<div class="footer-distributed">
+		<div class="footer-distributed-short">
 
-			<div class="footer-left">
+			<div class="footer-left-short">
 
-				<p class="footer-links">
+				<p class="footer-links-short">
 					<a href="home.php">Home</a>
 					·
 					<a href="photo_gallery.php">Gallery</a>

@@ -1,6 +1,5 @@
 <?php
-// set up databses connection constants
-// checks first if constant is already defined, if so do nothing
+//set up database connection constants
 
 defined('DB_SERVER') ? null : define("DB_SERVER", "localhost");
 defined('DB_USER') ? null : define("DB_USER", "Joanne");

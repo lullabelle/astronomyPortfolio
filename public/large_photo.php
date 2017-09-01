@@ -41,7 +41,7 @@
   <a href="photo_gallery.php">&laquo; Back</a><br />
 <br />
 
-<div id="photo">
+<div id="large_photo">
 <!--ALT TEXT DOES NOT WORK ON CHROME!! USE TITLE INSTEAD!!-->
   <img src="<?php echo $photo->image_path();?>" width="50% "title="<?php echo $photo->caption;?>"/>
   <p><?php echo $photo->caption; ?></p>
@@ -49,16 +49,17 @@
 
 <!--List back comments for current photo-->
 <!-- loop through comments and sanitize user data using htmlentities and strip tags -->
+<div class ="body-container">
 <div id="comments">
   <?php foreach($comments as $comment){ ?>
-    <div class="comment" style="margin-bottom: 2em;">
-	    <div class="author">
+    <div style="margin-bottom: 2em;">
+	    <div>
 	      <?php echo htmlentities($comment->author); ?> added:
 	    </div>
-      <div class="body">
+      <div>
 				<?php echo strip_tags($comment->body, '<strong><em><p>'); ?>
 			</div>
-	    <div class="meta-info" style="font-size: 0.8em;">
+	    <div style="font-size: 0.8em;">
 	      <?php echo datetime_to_text($comment->created); ?>
 	    </div>
     </div>
@@ -67,25 +68,18 @@
 </div>
 
 <!-- Comment form to submit new comment -->
-<div id="comment-form">
+
+<div id="comment_form">
   <h3>Add a Comment</h3>
   <?php echo output_message($message); ?>
   <form action="large_photo.php?id=<?php echo $photo->id; ?>" method="post">
-    <table>
-      <tr>
-        <td>Your name:</td>
-        <td><input type="text" name="author" value="<?php echo $author; ?>" /></td>
-      </tr>
-      <tr>
-        <td>Your comment:</td>
-        <td><textarea name="body" cols="40" rows="8"><?php echo $body; ?></textarea></td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><input type="submit" name="submit" value="Submit Comment" /></td>
-      </tr>
-    </table>
+          
+	  <div><input type="text" name="author" value="<?php echo $author; ?>" placeholder="Name" /></div>
+	  <div><textarea name="body" placeholder="Comment" cols="40" rows="8"><?php echo $body; ?></textarea></div>
+	  <div><input type="submit" name="submit" value="Submit Comment" /></div>
+
   </form>
+</div>
 </div>
 
  <?php include_layout_template('footer.php'); ?> 

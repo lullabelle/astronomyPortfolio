@@ -78,7 +78,7 @@
 
 
    <!-- HTML 5 video links -->
-   <div id = "">
+  
   	 <div class="video">
       	<iframe id="ytplayer" type="text/html" width="320" height="240" 
         src="https://www.youtube.com/embed/k-WWkaVzOr8?autoplay=0&amp;modestbranding=1&amp;rel=0&amp;showinfo=0" 
@@ -100,7 +100,7 @@
          frameborder="0" allowfullscreen=""></iframe>
            <p>Pleiades2 2013</p>
       </div> <!-- video 3 end -->
-    </div><!-- video wrapper end-->
-</div>
+
+
 
 <?php include_layout_template('footer.php'); ?>
